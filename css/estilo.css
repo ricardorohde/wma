@@ -1,0 +1,163 @@
+body{
+	color: #222;
+	background-color: #def;
+	font-family: "helvetica", "calibri", "arial", sans-serif;
+}
+
+/*===================================================================
+=============== Cabeçalho ===========================================
+====================================================================*/
+
+.cabecalho{
+	padding-bottom: 10px;
+}
+.logo{
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.img-contatos{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*===================================================================
+=============== Barra de Navegação ==================================
+====================================================================*/
+
+.menu{
+	margin-left: 8%;
+}
+
+.menu ul li{
+	width: 90px;
+	text-align: center;
+}
+
+.menu ul li:hover{
+	background-color: #00f;
+}
+
+.menu ul li a{
+	font-size: 18px;
+}
+
+/*===================================================================
+=============== Caonteúdo da Home ===================================
+====================================================================*/
+
+.div-conteudo-servicos{
+	background-color: #aaccff;
+
+}
+
+.div-conteudo-servicos h3{
+	background-color: #88aaff;
+	margin: 5px;
+	box-shadow: -2px 2px 2px #000;
+	text-align: center;
+}
+
+.img-conteudo{
+	width: 96%;
+	border: 5px solid #fff;
+}
+
+.div-conteudo-servicos ul{
+	padding: 0 5px;
+}
+.div-conteudo-servicos li{
+	font-size: 1.2em;
+	margin-top: 10px;
+	font-weight: bolder;
+
+}
+
+/*===================================================================
+=============== Caonteúdo da pagina Sobre ===========================
+====================================================================*/
+
+.conteudo-sobre{
+	background-color: #def;
+}
+
+.conteudo-sobre-texto{
+	background-color: ;
+	
+}
+
+.conteudo-sobre-texto h1{
+	color: #222;
+	font-family: "helvetica", "calibri", "arial", sans-serif;
+	text-align: center;
+}
+
+.conteudo-sobre-texto p{
+	font-weight: bolder;
+	text-align: justify;
+	padding: 10px;
+	font-size: 1.2em;
+	font-family: "helvetica";
+}
+
+
+.conteudo-sobre-img{
+}
+
+/*===================================================================
+=============== Caonteúdo da pagina Contato =========================
+====================================================================*/
+.conteudo-form{
+	border: 5px solid #aabbff;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.conteudo-form label{
+	font-weight: bolder;
+}
+
+
+.conteudo-contatos{
+	border: 5px solid #aabbff;
+	border-radius: 5px;
+	padding: 10px;
+
+}
+
+.conteudo-contatos ul li{
+	padding-top: 10px;
+}
+
+.conteudo-contatos img{
+	margin: 5px;
+}
+
+.conteudo-contatos span{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+/*===================================================================
+=============== Rodapé ==============================================
+====================================================================*/
+
+footer{
+	margin-bottom: 0px;
+}
+.rodape{
+	background-color: #555555;
+	position: relative;
+	top: 20px;
+	padding-bottom: 40px;
+	color: #ccc;
+}
+
+.rodapes{
+	margin-top: 20px;
+}
+
+.rodape2{
+}

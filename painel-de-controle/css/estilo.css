@@ -1,0 +1,87 @@
+body{
+	background-color: #eee;
+}
+
+/*===================================================================
+=============== Cabeçalho ===========================================
+====================================================================*/
+
+.cabecalho{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.label-usuario {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #05f;
+    border-radius: 5px;
+    color: #ddd;
+}
+
+/*===================================================================
+=============== Barra de Navegação ==================================
+====================================================================*/
+
+.menu{
+	margin-left: 6%;
+}
+
+.menu ul li{
+	width: 90px;
+	text-align: center;
+}
+
+.menu ul li:hover{
+	background-color: #00f;
+}
+
+.menu ul li a{
+	font-size: 18px;
+}
+
+
+/*===================================================================
+=============== Barra de Navegação ==================================
+====================================================================*/
+
+.login{
+	background-color: #033;
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.login legend{
+	color: #eee;
+}
+
+.form-login{
+	margin: auto;
+}
+
+
+
+
+/*===================================================================
+=============== Rodapé ==================================
+====================================================================*/
+
+.rodape{
+	height: 60px;
+	background-color: #555555;
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 40px;
+	color: #ccc;
+
+}
+
+.rodape p{
+	color: #5af;
+	text-align: center;
+}
