@@ -44,8 +44,8 @@
 							     	<ul class="nav">
 							        	<li class="item-menu"><a href="contatos.php">Contatos</a></li>
 								        <li class="item-menu"><a href="servicos.php">Serviços</a></li>
-								        <li class="item-menu"><a href="contato.php">Contato</a></li>
 								        <li class="item-menu"><a href="teste.php">TESTE</a></li>
+								        <li class="item-menu"><a href="usuario.php">Usuário</a></li>
 							    	</ul>
 							    </div>
 					 

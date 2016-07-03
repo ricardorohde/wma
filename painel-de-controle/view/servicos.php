@@ -1,5 +1,5 @@
 <?php require_once '../includes/templates/header.php'; ?>
-	<section>
+	<section id="corpo">
 		<div class="row-fluid">
 			<div class="span10 offset1">
 				<div class="tabbable div-tab"> <!-- Only required for left/right tabs -->
@@ -75,7 +75,7 @@
 							</form>
 						</div>
 
-						<div class="tab-pane active tab tab3" id="tab3">
+						<div class="tab-pane tab tab3" id="tab3">
 							<table class="table table-striped">
 								<legend>Tabela Serviços</legend>
 								<thead class="thead">
@@ -118,7 +118,7 @@
 							<button class="btn btn-primary" >Novo Contato</button>
 						</div>
 						
-						<div class="tab-pane active tab tab4" id="tab4">
+						<div class="tab-pane tab tab4" id="tab4">
 							<form class="form-horizontal">
 								<div class="control-group">
 									<label class="control-label" for="nomeServico">Serviço</label>

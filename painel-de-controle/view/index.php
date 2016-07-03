@@ -20,7 +20,7 @@
 			<div class="row-fluid">
 				<div class="sapn12 login" id="login">
 					<legend>Painel Administrativo <small>WMA Desenvolvimento</small></legend>
-					<form class="form form-login " action="home.php" >
+					<form class="form form-login " action="logar.php" >
 						<div class="control-group">
 							<label class="control-label muted" for="nome">Email</label>
 							<div class="controls">

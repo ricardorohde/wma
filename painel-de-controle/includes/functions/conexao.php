@@ -3,7 +3,7 @@
 		define('DB_HOST', 'localhost', true);
 		define('DB_USER', 'root', true);
 		define('DB_PASS', '', true);
-		define('DB_NAME', 'wma', true);
+		define('DB_NAME', 'wma_db', true);
 	}
 	// elseif($_SERVER['SERVER_NAME'] === '' || $_SERVER['SERVER_NAME'] === ''){
 	//     define('DB_HOST', 'mysql.hostinger.com.br', true);
