@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../css/bootstrap.css">
 		<link rel="stylesheet" href="../css/bootstrap-responsive.css">
 		<link rel="stylesheet" href="../css/estilo.css">
+		<link rel="stylesheet" href="../css/index.css">
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.js"></script>
 		<script type="text/javascript" src="../js/funcoes.js"></script>
@@ -19,7 +20,7 @@
 			<div class="row-fluid">
 				<div class="sapn12 login" id="login">
 					<legend>Painel Administrativo <small>WMA Desenvolvimento</small></legend>
-					<form class="form form-login ">
+					<form class="form form-login " action="home.php" >
 						<div class="control-group">
 							<label class="control-label muted" for="nome">Email</label>
 							<div class="controls">

@@ -22,9 +22,7 @@
 				</div>
 				<div class="span3">
 					<span class="label-usuario"><i class="icon-user"></i> Wanderlei</span>
-					<i class="icon-user"></i>
 				</div>
-				<i class="icon-user"></i>
 			</div>
 		</header>
 		<nav>
@@ -44,9 +42,10 @@
 							     <!-- .nav, .navbar-search, .navbar-form, etc -->
 							     	<a class="brand" href="#">Tabelas</a>
 							     	<ul class="nav">
-							        	<li class="item-menu"><a href="home.php">Contatos</a></li>
-								        <li class="item-menu"><a href="sobre.php">Sobre</a></li>
+							        	<li class="item-menu"><a href="contatos.php">Contatos</a></li>
+								        <li class="item-menu"><a href="servicos.php">Serviços</a></li>
 								        <li class="item-menu"><a href="contato.php">Contato</a></li>
+								        <li class="item-menu"><a href="teste.php">TESTE</a></li>
 							    	</ul>
 							    </div>
 					 

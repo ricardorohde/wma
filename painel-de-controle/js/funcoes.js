@@ -15,3 +15,7 @@ this.resizeDiv = function () {
 		divLogin.style.marginTop  = newHeightDiv+'px';
 	}
 }
+
+this.filePath = function (){
+	document.getElementById('uploadFile').value = document.getElementById('uploadBtn').value;
+};

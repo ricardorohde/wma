@@ -19,8 +19,44 @@ body{
     font-weight: bolder;
     background-color: #05f;
     border-radius: 5px;
-    color: #ddd;
+    color: #fff;
 }
+
+/*===================================================================
+=============== Conteudo - Contatos.php ==================================
+====================================================================*/
+
+.div-tab{
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+
+.ul-abas{
+	background-color: #555;
+}
+
+.tab{
+	padding: 0 10px;
+	padding-bottom: 30px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
 
 /*===================================================================
 =============== Barra de Navegação ==================================
@@ -48,37 +84,19 @@ body{
 =============== Barra de Navegação ==================================
 ====================================================================*/
 
-.login{
-	background-color: #033;
-	max-width: 400px;
-	margin: auto;
-	padding: 20px;
-	border-radius: 5px;
-}
-
-.login legend{
-	color: #eee;
-}
-
-.form-login{
-	margin: auto;
-}
-
 
 
 
 /*===================================================================
-=============== Rodapé ==================================
+=============== Footer ==============================================
 ====================================================================*/
 
 .rodape{
 	height: 60px;
 	background-color: #555555;
-	position: absolute;
-	bottom: 0;
 	padding-bottom: 40px;
 	color: #ccc;
-
+	line-height: 60px;
 }
 
 .rodape p{
