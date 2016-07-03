@@ -1,13 +1,31 @@
 <?php 
 
-function teste ($a) {
-	if($a == 1)
-		return "SIM";
-	else
-		return "NAO";
+include('../includes/config/include_directory_function.php');
+includePhpExtension(array('conexao', 'crud'));
 
-	return $array = array('Nome' => 'Joao', 'Idade' => 18 );
+function createArray ($nm_pai, $nm_filho) {
+	$array = array(
+			'nm_pai' => $nm_pai,
+			'nm_filho' => $nm_filho
+		);
+	return $array;
 }
+$data = createArray('Osvaldo', 'Breno');
+var_dump($data);
 
-$array = teste(2);
-var_dump($array);
+$tabela = 'teste';
+// $data = create($tabela, createArray('Osvaldo', 'Breno'));
+// echo $data."<hr/>";
+
+// $data = read('teste');
+// if(is_array($data)){
+// 	foreach($data as $res){
+// 		extract($res);
+// 		echo "Pai : ".$nm_pai."<br/>";
+// 	}
+// }else
+// 	echo $data;
+
+// echo "<hr/>";
+// foreach($campos as $key => $value)
+// 	echo $key." - ".$value."<br/>";
