@@ -1,13 +1,17 @@
 <?php 
 include_once('../includes/templates/head.php');
-function teste ($a, $b, $c){
-	if(!isset($a, $b, $c))
-		die("Um ou mais parametro esta com valor indefinido");
-	if( empty($a) || empty($b) || empty($c) )
-		die("Um dos parametros estar com valor vazio");
-};
+// function teste ($a, $b, $c){
+// 	if(!isset($a, $b, $c))
+// 		die("Um ou mais parametro esta com valor indefinido");
+// 	if( empty($a) || empty($b) || empty($c) )
+// 		die("Um dos parametros estar com valor vazio");
+// };
 
-@teste('Joao', 'Paulo', 'kk');
+// @teste('Joao', 'Paulo', 'kk');
+
+$NOME = 'NOME';
+$nome = 'nome';
+echo $NOME."<br/>".$nome;
 
 echo "<hr/>";
 

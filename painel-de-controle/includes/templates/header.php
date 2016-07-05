@@ -1,3 +1,7 @@
+<?php 
+include_once('../functions/login.php');
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -21,7 +25,8 @@
 					<a href="home.php"><img src="../img/logo.png" class="img-responsive" alt=""></a>
 				</div>
 				<div class="span3">
-					<span class="label-usuario"><i class="icon-user"></i> Wanderlei</span>
+					<span class="label-usuario"><i class="icon-user"></i><?php echo $_SESSION['nome'] ?></span>
+					<a href="../actions/logout.php?logof=true"><button type="button" class="btn btn-primary" >Sair</button></a>					
 				</div>
 			</div>
 		</header>

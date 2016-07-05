@@ -1,4 +1,3 @@
-<meta charset="utf-8"/>
 <?php 
 	require_once 'conexao.php';
 
@@ -18,14 +17,14 @@
 	};
 
 	function read ($tabela, $campos = '*' , $condicao = NULL){
-		@$querySelect = "SELECT {$campos} FROM {$tabela} {$condicao}";
+		@$querySelect = "SELECT {$campos} FROM {$tabela}  {$condicao}";
 		list($select, $link) = executeQuery($querySelect);
 		if(mysqli_num_rows($select)){
 			while ($dados = mysqli_fetch_assoc($select))
 				$data[] = $dados; 
 			return $data;
 		}else
-			return "Consulta não retornou nenhum dados ";
+			return false;
 	};
 
 	function update ($tabela, array $campos, $condicao=null) {

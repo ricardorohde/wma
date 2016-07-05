@@ -15,16 +15,21 @@
 		<script type="text/javascript" src="../js/bootstrap.js"></script>
 		<script type="text/javascript" src="../js/funcoes.js"></script>
 	</head>
-	<body onload="resizeDiv();">
+	<body>
 		<section>
 			<div class="row-fluid">
 				<div class="sapn12 login" id="login">
 					<legend>Painel Administrativo <small>WMA Desenvolvimento</small></legend>
-					<form class="form form-login " action="logar.php" >
+					<!-- <div class="alert">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<a class="close" data-dismiss="alert" href="#">&times;</a>
+						<strong>Advertência!</strong> Melhor checar você mesmo, você não está parecendo bem
+					</div> -->
+					<form class="form form-login " method="post" action="../actions/logar.php" >
 						<div class="control-group">
-							<label class="control-label muted" for="nome">Email</label>
+							<label class="control-label muted" for="user">User</label>
 							<div class="controls">
-								<input type="text" id="nome" name="nome" class="span12">
+								<input type="text" id="user" name="user" class="span12">
 							</div>
 						</div>
 						<div class="control-group">
@@ -35,7 +40,7 @@
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<input type="submit" name="entar" id="btn-entrar" class="btn btn-inverse btn-entrar" value="Entrar">
+								<input type="submit" name="entrar" id="btn-entrar" class="btn btn-inverse btn-entrar" value="Entrar">
 								<input type="reset" name="limpar" id="btn-limpar" class="btn btn-inverse btn-limpar" value="Limpar">
 							</div>
 						</div>

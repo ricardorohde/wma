@@ -1,36 +1,35 @@
 <?php 
 
-include('../includes/config/include_directory_function.php');
-includePhpExtension(array('conexao', 'crud'));
+include('../backend/functions/conexao.php');
+include('../backend/functions/crud.php');
+// includePhpExtension(array('conexao', 'crud'));
 
-function createArrayInsert ($nm_pai, $nm_filho) {
+function createArrayInsert ($nm_pai, $nm_filho, $senha) {
 	$array = array(
 			'nm_pai' => $nm_pai,
-			'nm_filho' => $nm_filho
+			'nm_filho' => $nm_filho,
+			'senha' => $senha
 		);
 	return $array;
 }
 
 $tabela = 'teste';
-$array = createArrayInsert('Joao', 'caio') or die();
-echo create($tabela, $array);
-echo "<hr/>";
-
-
-
-// echo delete('teste', "id > '2'");
+$sen = 'carlos10';
+$senha = @crypt($sen);
+// $array = createArrayInsert('Carlos', 'caio', $senha);
+// echo create($tabela, $array);
 // echo "<hr/>";
 
 
 
+// echo delete('teste', "id = '22'");
+// echo "<hr/>";
 
-
-
-
-function createArrayUpdate ($nm_pai, $nm_filho) {
+function createArrayUpdate ($nm_pai, $nm_filho, $senha) {
 	$array = array(
 		'nm_pai' => $nm_pai,
-		'nm_filho' => $nm_filho
+		'nm_filho' => $nm_filho,
+		'senha' => $senha
 	);
 	$newArray = array();
 	foreach($array as $key => $value){
@@ -40,17 +39,18 @@ function createArrayUpdate ($nm_pai, $nm_filho) {
 	return $newArray;
 }
 
-// echo update('teste', createArrayUpdate('Wanderlei', 'Aguiar'), "id > 14");
+// echo update('teste', createArrayUpdate('Wanderlei', 'Aguiar', $senha), "id > 14");
 // echo "<hr/>";
 
-$data = read('teste');
-if(is_array($data)){
-	echo "Id ---- Pai -------- Filho<br/>";
-	foreach($data as $res){
-		extract($res);
-		echo $id." ->> ".$nm_pai." - ".$nm_filho."<br/>";
-	}
-}else
-	echo $data;
+$data = read('teste', 'senha', "WHERE senha = $senha");
+var_dump($data);
+// if(is_array($data)){
+// 	echo "Id ---- Pai -------- Filho --------- Senha<br/>";
+// 	foreach($data as $res){
+// 		extract($res);
+// 		echo $id." ->> ".$nm_pai." - ".$nm_filho." - ".$senha."<br/>";
+// 	}
+// }else
+// 	echo $data;
 
 

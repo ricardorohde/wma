@@ -1,6 +1,8 @@
-<?php 
-	define('PATH_INCLUDE', '../includes/');
-	set_include_path(PATH_INCLUDE."functions/");
+<?php
+	function setIncludePath($path) {	
+		set_include_path($path);
+	};
+
 	function includePhpExtension($includes){	
 		if(is_array($includes)) {
 			foreach ($includes as $inc)
