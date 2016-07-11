@@ -11,57 +11,26 @@ body{
 	padding-bottom: 10px;
 }
 
+.header-login{
+}
+
+.div-logof{
+}
+
 .label-usuario {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 10px;
-    font-size: 15px;
+    height: 25px;
+    font-size: 18px;
     font-weight: bolder;
     background-color: #05f;
     border-radius: 5px;
     color: #fff;
+    max-width: 100%;
+    line-height: 25px;
 }
 
-/*===================================================================
-=============== Conteudo - Contatos.php ==================================
-====================================================================*/
-section#corpo{
-	border-bottom: 1px solid transparent;
-	margin-bottom: 20px;
-	min-height: 384px;
-
+.btn-logof{
+	font-size: 15px;
 }
-
-.div-tab{
-	background-color: #fff;
-}
-
-.ul-abas{
-	background-color: #555;
-}
-
-.tab{
-	padding: 0 10px;
-	padding-bottom: 30px;
-}
-
-.fileUpload {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-}
-.fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
 
 /*===================================================================
 =============== Barra de Navegação ==================================
@@ -84,12 +53,72 @@ section#corpo{
 	font-size: 18px;
 }
 
-
 /*===================================================================
-=============== Barra de Navegação ==================================
+=============== Conteudo ============================================
 ====================================================================*/
+section#corpo{
+	border-bottom: 1px solid transparent;
+	margin-bottom: 20px;
+	min-height: 433px;
+
+}
+
+/*= Tabela de dados */
+
+.table-crud{
+	background-color: #fff;
+}
+
+legend.table{
+	font-weight: bolder;
+}
+
+.table-crud th{
+	vertical-align: middle;
+	font-size: 18px;
+	height: 30px;
+}
 
 
+/*= FIM Tabela de dados */
+
+/*= Formulário de incluir e Editar */
+
+.legend-form{
+	font-weight: bolder;
+}
+
+.form-crud{
+	border: 2px solid #ccc;
+	background-color: #ddd;
+	padding: 30px 0;
+	border-radius: 10px;
+}
+
+.form-crud label{
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+/*=FIM -> Formulário de incluir e Editar e  */
 
 
 /*===================================================================
@@ -106,6 +135,5 @@ section#corpo{
 .rodape p{
 	color: #5af;
 	text-align: center;
-	position: relative;
-	top: 40%;
+	margin-top: 30px;
 }

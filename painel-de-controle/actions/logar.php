@@ -2,7 +2,7 @@
 	if(!empty($_POST['user']) && !empty($_POST['senha'])){
 		include_once '../functions/include_directory_functions.php';
 		setIncludePath('../functions/');
-		includePhpExtension(array('conexao', 'crud', 'login'));
+		includePhpExtension(array('conexao', 'crud', 'login', 'util'));
 		$user  = addslashes(trim($_POST['user']));
 		$senha = addslashes(trim($_POST['senha']));
 		//$senha = md5($senha);
@@ -13,8 +13,8 @@
 		$data = read('usuario', '*', "WHERE USER = '$user' AND SENHA = '$senha'");
 		if($data){
 			startSession($data);
-		 	echo "<script>location.href='../view/home.php';</script>";
+			pageRedirects('../view/home.php');
 		}else
-		 	echo "<script>location.href='../view/';</script>";
+			pageRedirects('../view/?error=1');
 	}else
 		header("Location:../view/"); 

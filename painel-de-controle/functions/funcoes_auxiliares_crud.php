@@ -2,9 +2,9 @@
 
 //========= Tabela Contatos =================//
 
-function criaArrayTabelaContatos  ($nm_contato, $ds_contato, $icon_contato, $crud) {
+function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $crud) {
 	if(!isset($nm_contato, $ds_contato, $icon_contato))
-		die("Um ou mais parametro esta com indefinido");
+		die("Um ou mais parametro esta como indefinido");
 	if( empty($nm_contato) || empty($ds_contato) || empty($icon_contato) )
 		die("Um ou mais parametros estar com valor vazio");
 

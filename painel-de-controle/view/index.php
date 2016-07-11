@@ -20,22 +20,22 @@
 			<div class="row-fluid">
 				<div class="sapn12 login" id="login">
 					<legend>Painel Administrativo <small>WMA Desenvolvimento</small></legend>
-					<!-- <div class="alert">
-						<button type="button" class="close" data-dismiss="alert">×</button>
-						<a class="close" data-dismiss="alert" href="#">&times;</a>
-						<strong>Advertência!</strong> Melhor checar você mesmo, você não está parecendo bem
-					</div> -->
+					<?php if(isset($_GET['error']) && $_GET['error'] == '1' ): ?>
+					<div class="alert alert-error">
+						<strong>Advertência!</strong> Login ou senha inválidos
+					</div>
+					<?php endif; ?>
 					<form class="form form-login " method="post" action="../actions/logar.php" >
 						<div class="control-group">
 							<label class="control-label muted" for="user">User</label>
 							<div class="controls">
-								<input type="text" id="user" name="user" class="span12">
+								<input type="text" id="user" name="user" class="span12" required />
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label muted" for="senha">Senha</label>
 							<div class="controls">
-								<input type="password" id="senha" name="senha" class="span12" />
+								<input type="password" id="senha" name="senha" class="span12" accept="image/*" data-file-type="zip|png" data-max-size="1048576" required />
 							</div>
 						</div>
 						<div class="control-group">

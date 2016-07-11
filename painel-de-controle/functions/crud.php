@@ -3,8 +3,8 @@
 
 	function executeQuery ($query) {
 		$link = dbConect();
-		$result = mysqli_query($link, $query)or die("Erro na execução da query!!!<br/>".mysqli_error($link));
-		return array($result, $link);
+		$response = mysqli_query($link, $query)or die("Erro na execução da query!!!<br/>".mysqli_error($link));
+		return array($response, $link);
 		dbClose($link);
 	};
 

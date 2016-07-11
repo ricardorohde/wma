@@ -14,9 +14,10 @@ session_start();
 		<link rel="stylesheet" href="../css/bootstrap.css">
 		<link rel="stylesheet" href="../css/bootstrap-responsive.css">
 		<link rel="stylesheet" href="../css/estilo.css">
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+		<script src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/funcoes.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
 	</head>
 	<body>
 		<header>
@@ -24,9 +25,16 @@ session_start();
 				<div class="span7 offset1">
 					<a href="home.php"><img src="../img/logo.png" class="img-responsive" alt=""></a>
 				</div>
-				<div class="span3">
-					<span class="label-usuario"><i class="icon-user"></i><?php echo $_SESSION['nome'] ?></span>
-					<a href="../actions/logout.php?logof=true"><button type="button" class="btn btn-primary" >Sair</button></a>					
+				<div class="span2 header-login">
+					<span class="label label-info label-usuario" ><i class="icon-user"></i>
+						<?php echo $_SESSION['nome'] ?>
+					</span>
+				</div>
+				<div class="span1 div-logof">
+					<a href="../actions/logout.php?logof=true" class="btn btn-primary btn-small btn-logof">
+						Sair
+						<!-- <button type="button" class="btn btn-primary btn-small" >Sair</button> -->
+					</a>					
 				</div>
 			</div>
 		</header>
