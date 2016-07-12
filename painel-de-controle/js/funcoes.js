@@ -20,7 +20,7 @@ this.filePath = function (){
 	document.getElementById('uploadFile').value = document.getElementById('uploadBtn').value;
 };
 
-function pageRedirects(path){
+function pageRedirectsJs(path){
 	window.location.href = path;
 }
 
