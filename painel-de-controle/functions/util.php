@@ -8,3 +8,7 @@ function alert($text='Alert') {
 	echo "<script>alert('$text')</script>";
 }
 
+function printBr() {
+	echo "<br/><br/>";
+}
+

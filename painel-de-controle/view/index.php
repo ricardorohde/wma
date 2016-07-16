@@ -1,3 +1,4 @@
+<?php include_once('../actions/LoginController.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -22,10 +23,10 @@
 					<legend>Painel Administrativo <small>WMA Desenvolvimento</small></legend>
 					<?php if(isset($_GET['error']) && $_GET['error'] == '1' ): ?>
 					<div class="alert alert-error">
-						<strong>Advertência!</strong> Login ou senha inválidos
+						<strong>Usuário ou senha inválidos !</strong>
 					</div>
 					<?php endif; ?>
-					<form class="form form-login " method="post" action="../actions/logar.php" >
+					<form class="form form-login " method="post" action="../actions/LoginController.php" >
 						<div class="control-group">
 							<label class="control-label muted" for="user">User</label>
 							<div class="controls">

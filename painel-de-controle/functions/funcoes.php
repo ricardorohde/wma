@@ -1,8 +1,11 @@
 <?php 
+/*
+	======= Funções de login =======
+ */
+
 function startSession ($data) {
 	foreach ($data as $res){
 		extract($res);
-		session_start();
 		$_SESSION['nivel']=$NIVEL;
 		$_SESSION['email']=$EMAIL;
 		$_SESSION['nome']=$NOME;

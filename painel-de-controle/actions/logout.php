@@ -2,7 +2,7 @@
 	if(isset($_GET['logof']) && $_GET['logof'] == true){
 		include_once '../functions/include_directory_functions.php';
 		setIncludePath('../functions/');
-		includePhpExtension(array('login'));
+		includePhpExtension(array('funcoes'));
 		closeSession();
 		header("location:../view/");
 	}

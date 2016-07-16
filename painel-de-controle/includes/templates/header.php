@@ -1,7 +1,3 @@
-<?php 
-include_once('../functions/login.php');
-session_start();
- ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -56,12 +52,12 @@ session_start();
 							     	<a class="brand" href="#">Tabelas</a>
 							     	<ul class="nav">
 							        	<li class="item-menu"><a href="contatos.php">Contatos</a></li>
-								        <li class="item-menu"><a href="servicos.php">Serviços</a></li>
-								        <li class="item-menu"><a href="teste.php">TESTE</a></li>
-								        <li class="item-menu"><a href="usuario.php">Usuário</a></li>
+							      	<li class="item-menu"><a href="servicos.php">Serviços</a></li>
+							      	<li class="item-menu"><a href="descricao-servicos.php">Descrição Serviços</a></li>
+							      	<li class="item-menu"><a href="teste.php">TESTE</a></li>
+							      	<li class="item-menu"><a href="usuario.php">Usuário</a></li>
 							    	</ul>
 							    </div>
-					 
 					    	</div>
 					  	</div>
 					</div>

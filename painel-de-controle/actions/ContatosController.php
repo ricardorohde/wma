@@ -2,9 +2,11 @@
 	session_start();
 	include_once '../functions/include_directory_functions.php';
 	setIncludePath('../functions/');
-	includePhpExtension(array('conexao', 'crud', 'funcoes_auxiliares_crud', 'util', 'form'));
+	includePhpExtension(array('crud', 'funcoes_auxiliares_crud', 'util', 'form'));
 
+	//Declaração de constantes
 	define('TABELA', 'contatos');
+	//Declaração de variaveis
 	
 	if(isset($_POST['enviar']) && !empty($_POST['nomeContato']) && !empty($_POST['descricaoContato']) && $_POST['operacao'] == 0 && $_FILES['arquivo']['size'] > 0 ){
 

@@ -1,12 +1,14 @@
-<?php require_once '../includes/templates/header.php'; ?>
-
+<?php 
+	session_start();
+	include_once ('../includes/templates/header.php');
+?>
 	<section id="corpo">
 		<div class="row-fluid">
 			<div class="span10 offset1">
-				<?php if(isset($_SESSION['error'])): ?>
+				<?php if(!empty($error)): ?>
 					<div class="alert alert-error">
 						<button type="button" class="close" data-dismiss="alert">×</button>
-						<strong> <?php echo $_SESSION['error']; unset($_SESSION['error']) ?> </strong>
+						<strong> <?php echo $_SESSION['error']; unset($_SESSION['error']); ?> </strong>
 					</div>
 				<?php endif; ?>
 				<button class="btn btn-primary pull-right" href="#tab" onclick="pageRedirectsJs('contatos.php')"><i class="icon-arrow-left icon-white"></i> Voltar</button>

@@ -1,9 +1,9 @@
 <?php
 	session_start();
+	include_once '../functions/include_directory_functions.php';
+	setIncludePath('../functions/');
+	includePhpExtension(array('crud', 'funcoes', 'util'));
 	if(!empty($_POST['user']) && !empty($_POST['senha'])){
-		include_once '../functions/include_directory_functions.php';
-		setIncludePath('../functions/');
-		includePhpExtension(array('conexao', 'crud', 'login', 'util'));
 		$user  = addslashes(trim($_POST['user']));
 		$senha = addslashes(trim($_POST['senha']));
 		//$senha = md5($senha);
@@ -18,4 +18,6 @@
 		}else
 			pageRedirects('../view/?error=1');
 	}else
-		header("Location:../view/"); 
+		include_once('../view/index.php');
+
+		

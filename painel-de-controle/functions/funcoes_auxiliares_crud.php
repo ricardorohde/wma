@@ -33,7 +33,7 @@ function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $cru
 
 //========= Tabela Serviço =================//
 
-function criaArrayTabelaServico  ($nm_servico, $img_servico, $crud) {
+function createArrayServicesTable ($nm_servico, $img_servico, $crud) {
 	if(!isset($nm_servico, $img_servico))
 		die("Um ou mais parametro esta com indefinido");
 	if( empty($nm_servico) || empty($img_servico) )
@@ -62,7 +62,7 @@ function criaArrayTabelaServico  ($nm_servico, $img_servico, $crud) {
 
 //========= Tabela Serviços =================//
 
-function criaArrayTabelaServicos  ($id_fk_servico, $ds_servicos, $crud) {
+function createArrayServicesDescriptionTable  ($id_fk_servico, $ds_servicos, $crud) {
 	if(!isset($id_fk_servico, $ds_servicos))
 		die("Um ou mais parametro esta com indefinido");
 	if( empty($id_fk_servico) || empty($ds_servicos) )

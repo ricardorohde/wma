@@ -1,7 +1,7 @@
 <?php 
 
-include('../backend/functions/conexao.php');
-include('../backend/functions/crud.php');
+include('../functions/crud.php');
+include('../functions/funcoes_auxiliares_crud.php');
 // includePhpExtension(array('conexao', 'crud'));
 
 function createArrayInsert ($nm_pai, $nm_filho, $senha) {

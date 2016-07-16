@@ -1,18 +1,17 @@
-<?php
-	include_once('../functions/include_directory_functions.php');
-	includePhpExtension(array('crud'));
-			
+<?php	
+	session_start();
+	include('../functions/crud.php');	
+	include_once('../includes/templates/header.php');
 ?>
-<?php require_once '../includes/templates/header.php'; ?>
 <section id="corpo" >
 	<div class="row-fluid">
 		<div class="span10 offset1">
-			<?php if(isset($_SESSION['success'])): ?>
+			<?php if(!empty($success)): ?>
 				<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					<strong> <?php echo $_SESSION['success']; unset($_SESSION['success']) ?> </strong>
 				</div>
-			<?php elseif(isset($_SESSION['error'])): ?>
+			<?php elseif(!empty($error)): ?>
 				<div class="alert alert-error">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					<strong> <?php echo $_SESSION['error']; unset($_SESSION['error']) ?> </strong>
@@ -45,7 +44,8 @@
 						<td>
 						<?php
 							$table = 'contatos';
-							echo"<a href='../actions/excluir.php?id=$id_contato&table=$table'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
+							$page = 'contatos';
+							echo"<a href='../actions/excluir.php?id=$id_contato&table=$table&idName=id_contato&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
 						?>
 						</td>
 					</tr>

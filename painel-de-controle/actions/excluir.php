@@ -7,12 +7,14 @@
 
 		$id = $_GET['id'];
 		$table = $_GET['table'];
+		$idName = $_GET['idName'];
+		$page = $_GET['page'];
 
-		$response = delete($table, "id_contato = '$id'");
+		$response = delete($table, "$idName = '$id'");
 		if($response)
 			$_SESSION['success'] = $response;
 		else
 			$_SESSION['error'] = 'Falha ao excluir !';
 		
-		pageRedirects('../view/contatos.php');
+		pageRedirects("../view/$page.php");
 	}
