@@ -1,4 +1,3 @@
-<?php include_once('../actions/LoginController.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>

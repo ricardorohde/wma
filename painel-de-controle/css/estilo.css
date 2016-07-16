@@ -117,8 +117,18 @@ legend.table{
     filter: alpha(opacity=0);
 }
 
-/*=FIM -> Formulário de incluir e Editar e  */
+/*=FIM -> Formulário de incluir e Editar */
 
+/*= Div Dados do usuário */
+
+.dados-usuario{
+	border: 2px solid #ccc;
+	padding: 0px 0;
+	border-radius: 10px;
+	background-color: #aaf;
+}
+
+/*=FIM -> Div Dados do usuário  */
 
 /*===================================================================
 =============== Footer ==============================================

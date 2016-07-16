@@ -39,11 +39,11 @@ function createArrayUpdate ($nm_pai, $nm_filho, $senha) {
 	return $newArray;
 }
 
-// echo update('teste', createArrayUpdate('Wanderlei', 'Aguiar', $senha), "id > 14");
-// echo "<hr/>";
+echo update('teste', createArrayUpdate(null,'Aguiar', $senha), "id > 14");
+echo "<hr/>";
 
-$data = read('teste', 'senha', "WHERE senha = $senha");
-var_dump($data);
+// $data = read('teste', 'senha', "WHERE senha = $senha");
+// var_dump($data);
 // if(is_array($data)){
 // 	echo "Id ---- Pai -------- Filho --------- Senha<br/>";
 // 	foreach($data as $res){

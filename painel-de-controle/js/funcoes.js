@@ -55,3 +55,73 @@ this.confirmDelete = function (dados){
 	if (resposta != true)
 		return false;
 }
+
+function IsEmail(email){
+    var exclude=/[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
+    var check=/@[w-]+./;
+    var checkend=/.[a-zA-Z]{2,3}$/;
+    if(((email.search(exclude) != -1)||(email.search(check)) == -1)||(email.search(checkend) == -1)){return false;}
+    else {return true;}
+}
+
+this.validateUserForm = function () {
+	var name = document.getElementById('nomeUsuario').value;
+	var email = document.getElementById('emailUsuario').value;
+	var userName = document.getElementById('userName').value;
+	var password = document.getElementById('senhaUsuario').value;
+	var level = document.getElementById('nivelUsuario').value;
+
+	//variaveis que arnazena expressões regulares para validação de email usuario e senha
+	var exclude=/[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
+	var check=/@[w-]+./;
+	var checkend=/.[a-zA-Z]{2,3}$/;
+	var userNameCheck =/[a-zA-Z0-9]{8,12}$/;
+	var passwordCheck =/[a-zA-Z0-9]{6,8}$/;
+
+	if(name.length < 3){
+		alert('Digite um nome válido');
+		document.getElementById('nomeUsuario').focus();
+		return false;
+	}
+	if(((email.search(exclude) != -1)||(email.search(check)) == -1)||(email.search(checkend) == -1)){
+		alert('Digite um nome válido');
+		document.getElementById('emailUsuario').focus();
+		return false;
+	}
+	if(userName.length < 8 && userName.length > 12){
+		alert('Digite um nome de usuário válido');
+		document.getElementById('userName').focus();
+		return false;
+	}
+	if(password.length < 6 && password.length > 8 ){
+		alert('Digite uma senha válida');
+		document.getElementById('senhaUsuario').focus();
+		return false;	
+	}
+	if(level != '1' && level != '2'){
+		alert('Escolha um valor de Nivel do usuário');
+		document.getElementById('nivelUsuario').focus();
+		return false;	
+	}
+
+};
+
+this.validateUserEditForm = function () {
+	var userName = document.getElementById('userName').value;
+	var password = document.getElementById('senhaUsuario').value;
+
+	//variaveis que arnazena expressões regulares para validação de email usuario e senha
+	var userNameCheck =/[a-zA-Z0-9]{8,12}$/;
+	var passwordCheck =/[a-zA-Z0-9]{6,8}$/;
+
+	if(userName.length < 8 && userName.length > 12){
+		alert('Digite um nome de usuário válido');
+		document.getElementById('userName').focus();
+		return false;
+	}
+	if(password.length < 6 && password.length > 8 ){
+		alert('Digite uma senha válida');
+		document.getElementById('senhaUsuario').focus();
+		return false;	
+	}
+};

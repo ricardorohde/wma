@@ -56,6 +56,7 @@
 							      	<li class="item-menu"><a href="descricao-servicos.php">Descrição Serviços</a></li>
 							      	<li class="item-menu"><a href="teste.php">TESTE</a></li>
 							      	<li class="item-menu"><a href="usuario.php">Usuário</a></li>
+							      	<li class="item-menu"><a href="perfil.php">Meu Perfil</a></li>
 							    	</ul>
 							    </div>
 					    	</div>

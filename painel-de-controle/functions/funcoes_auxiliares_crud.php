@@ -28,7 +28,7 @@ function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $cru
 		}
 		return $newArray;
 	}else
-		die('Paramantro "$crud" foi passado de maneira errada para a função ("criaArrayTabelaContato")');
+		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayContactsTable")');
 };
 
 //========= Tabela Serviço =================//
@@ -57,7 +57,7 @@ function createArrayServicesTable ($nm_servico, $img_servico, $crud) {
 		}
 		return $newArray;
 	}else
-		die('Paramantro "$crud" foi passado de maneira errada para a função ("criaArrayTabelaServico")');
+		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayServicesTable")');
 };
 
 //========= Tabela Serviços =================//
@@ -86,5 +86,38 @@ function createArrayServicesDescriptionTable  ($id_fk_servico, $ds_servicos, $cr
 		}
 		return $newArray;
 	}else
-		die('Paramantro "$crud" foi passado de maneira errada para a função ("criaArrayTabelaServicos")');
+		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayServicesDescriptionTable")');
+};
+
+//========= Tabela Contatos =================//
+
+function createArrayUserTable ($nome, $email, $userName, $senha, $nivel, $crud) {
+	if(!isset($nome, $email, $userName, $senha, $nivel, $crud))
+		die("Um ou mais parametro esta como indefinido");
+
+	if($crud == 'create'){	
+		$array = array(
+			'nome'		 => $nome,
+			'email'		 => $email,
+			'user_name'  => $userName,
+			'senha'		 => $senha,
+			'nivel'		 => $nivel
+		);
+		return $array;
+	}elseif($crud == 'update'){
+		$array = array(
+			'nome'		 => $nome,
+			'email'		 => $email,
+			'user_name'  => $userName,
+			'senha'		 => $senha,
+			'nivel'		 => $nivel
+		);
+		$newArray = array();
+		foreach($array as $key => $value){
+			if($value != '')
+				$newArray[$key] = $value;
+		}
+		return $newArray;
+	}else
+		die('Paramantro "$crud" foi passado de maneira errada para a função ("createArrayUserTable")');
 };
