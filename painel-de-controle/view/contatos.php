@@ -1,17 +1,19 @@
 <?php	
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: index.php');
 	include('../functions/crud.php');	
 	include_once('../includes/templates/header.php');
 ?>
 <section id="corpo" >
 	<div class="row-fluid">
 		<div class="span10 offset1">
-			<?php if(!empty($success)): ?>
+			<?php if(isset($_SESSION['success'])): ?>
 				<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					<strong> <?php echo $_SESSION['success']; unset($_SESSION['success']) ?> </strong>
 				</div>
-			<?php elseif(!empty($error)): ?>
+			<?php elseif(isset($_SESSION['error'])): ?>
 				<div class="alert alert-error">
 					<button type="button" class="close" data-dismiss="alert">×</button>
 					<strong> <?php echo $_SESSION['error']; unset($_SESSION['error']) ?> </strong>
@@ -45,7 +47,7 @@
 						<?php
 							$table = 'contatos';
 							$page = 'contatos';
-							echo"<a href='../actions/excluir.php?id=$id_contato&table=$table&idName=id_contato&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
+							echo"<a href='../actions/ExcluirController.php?id=$id_contato&table=$table&idName=id_contato&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
 						?>
 						</td>
 					</tr>

@@ -1,5 +1,7 @@
 <?php 
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: index.php');
 	include_once('../functions/crud.php');
 	include_once('../includes/templates/header.php');
 ?>
@@ -41,7 +43,7 @@
 							<?php
 								$table = 'descricao_servicos';
 								$page = 'descricao-servicos';
-								echo"<a href='../actions/excluir.php?id=$id_servicos&table=$table&idName=id_servicos&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
+								echo"<a href='../actions/ExcluirController.php?id=$id_servicos&table=$table&idName=id_servicos&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
 							?>
 							</td>
 						</tr>

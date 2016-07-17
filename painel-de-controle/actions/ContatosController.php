@@ -1,8 +1,11 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: ../view/index.php');
 	include_once '../functions/include_directory_functions.php';
-	setIncludePath('../functions/');
-	includePhpExtension(array('crud', 'funcoes_auxiliares_crud', 'util', 'form'));
+	set_include_path('../functions/');
+	includePhpExtension(array('crud', 'crud_auxiliar', 'general', 'form'));
+
 
 	//Declaração de constantes
 	define('TABELA', 'contatos');
@@ -22,7 +25,7 @@
 		
 		$response = fileValidation($fileSize, $fileType, $acceptedExtensions, $maximumSize);
 		if($response === true){
-			$extension = getExtension($originName);
+			$extension = getFileExtension($originName);
 			$response = moveUploadFile($extension, $folder, $tempName);
 			if($response){
 				$array = createArrayContactsTable($contactName, $descriptionContact, $response, 'create');
@@ -64,7 +67,7 @@
 
 		$response = fileValidation($fileSize, $fileType, $acceptedExtensions, $maximumSize);
 		if($response === true){
-			$extension = getExtension($originName);
+			$extension = getFileExtension($originName);
 			$response = moveUploadFile($extension, $folder, $tempName);
 			if($response){
 				$array = createArrayContactsTable($contactName, $descriptionContact, $response, 'update');

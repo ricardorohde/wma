@@ -1,9 +1,11 @@
 <?php 
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: ../index.php');
 	if(isset($_GET['id']) && empty(!$_GET['id'])){
 		include_once '../functions/include_directory_functions.php';
-		setIncludePath('../functions/');
-		includePhpExtension(array('crud','util'));
+		set_include_path('../functions/');
+		includePhpExtension(array('crud','general'));
 
 		$id = $_GET['id'];
 		$table = $_GET['table'];

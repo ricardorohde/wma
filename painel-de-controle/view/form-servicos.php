@@ -1,6 +1,8 @@
 <?php 
 	session_start();
-	require_once '../includes/templates/header.php';
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: index.php');
+	include_once('../includes/templates/header.php');
 ?>
 	<section id="corpo">
 		<div class="row-fluid">

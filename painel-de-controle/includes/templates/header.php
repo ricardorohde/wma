@@ -27,10 +27,7 @@
 					</span>
 				</div>
 				<div class="span1 div-logof">
-					<a href="../actions/logout.php?logof=true" class="btn btn-primary btn-small btn-logof">
-						Sair
-						<!-- <button type="button" class="btn btn-primary btn-small" >Sair</button> -->
-					</a>					
+					<a href="../actions/LogoffController.php?logof=true" class="btn btn-primary btn-small btn-logof">Sair</a>	
 				</div>
 			</div>
 		</header>
@@ -49,13 +46,13 @@
 							    <!-- Tudo que você queira escondido em 940px ou menos, coloque aqui -->
 							    <div class="nav-collapse collapse menu">
 							     <!-- .nav, .navbar-search, .navbar-form, etc -->
-							     	<a class="brand" href="#">Tabelas</a>
 							     	<ul class="nav">
 							        	<li class="item-menu"><a href="contatos.php">Contatos</a></li>
 							      	<li class="item-menu"><a href="servicos.php">Serviços</a></li>
 							      	<li class="item-menu"><a href="descricao-servicos.php">Descrição Serviços</a></li>
-							      	<li class="item-menu"><a href="teste.php">TESTE</a></li>
-							      	<li class="item-menu"><a href="usuario.php">Usuário</a></li>
+							      	<?php if(!isset($_SESSION['id_usuario']) || isset($_SESSION['nivel']) && $_SESSION['nivel'] == 1): ?>
+							      		<li class="item-menu"><a href="usuario.php">Usuário</a></li>
+										<?php endif; ?>
 							      	<li class="item-menu"><a href="perfil.php">Meu Perfil</a></li>
 							    	</ul>
 							    </div>

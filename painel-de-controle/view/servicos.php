@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: index.php');
 	include_once('../functions/include_directory_functions.php');
 	includePhpExtension(array('crud'));
 ?>
@@ -44,7 +46,7 @@
 							<?php
 								$table = 'servicos';
 								$page = 'servicos';
-								echo"<a href='../actions/excluir.php?id=$id_servico&table=$table&idName=id_servico&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
+								echo"<a href='../actions/ExcluirController.php?id=$id_servico&table=$table&idName=id_servico&page=$page'onclick='return confirmDelete();' class='btn btn-warning'><i class='icon-remove-sign'></i></a>";
 							?>
 							</td>
 						</tr>

@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: index.php');
 	include_once('../functions/crud.php');
 	include_once ('../includes/templates/header.php');
 ?>

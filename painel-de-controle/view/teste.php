@@ -8,10 +8,10 @@ include_once('../includes/templates/head.php');
 // };
 
 // @teste('Joao', 'Paulo', 'kk');
-
+echo "Anda <b> \"Logo\"</b> ";
 $NOME = 'NOME';
 $nome = 'nome';
-echo $NOME."<br/>".$nome;
+// echo $NOME."<br/>".$nome;
 
 echo "<hr/>";
 

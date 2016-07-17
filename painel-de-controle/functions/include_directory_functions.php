@@ -6,9 +6,9 @@
 	function includePhpExtension($includes){	
 		if(is_array($includes)) {
 			foreach ($includes as $inc)
-				include $inc.".php";
+				include_once($inc.".php");
 		}
 		else
-			echo "Parâmetro passado não é um Array!";
+			echo "<h2 style='red'>Parâmetro passado para a Função: <b> \"includePhpExtension\" </b> do arquivo <b> \"include_directory_functions.php\" <b/> não é um Array!</h2>";
 	};
 	

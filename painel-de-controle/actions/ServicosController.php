@@ -1,8 +1,10 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: ../index.php');
 	include_once '../functions/include_directory_functions.php';
-	setIncludePath('../functions/');
-	includePhpExtension(array('conexao', 'crud', 'funcoes_auxiliares_crud', 'util', 'form'));
+	set_include_path('../functions/');
+	includePhpExtension(array('conexao', 'crud', 'crud_auxiliar', 'general', 'form'));
 
 	define('TABELA', 'servicos');
 
@@ -19,7 +21,7 @@
 		
 		$response = fileValidation($fileSize, $fileType, $acceptedExtensions, $maximumSize);
 		if($response === true){
-			$extension = getExtension($originName);
+			$extension = getFileExtension($originName);
 			$response = moveUploadFile($extension, $folder, $tempName);
 			if($response){
 				$array = createArrayServicesTable($serviceName, $response, 'create');
@@ -59,7 +61,7 @@
 
 		$response = fileValidation($fileSize, $fileType, $acceptedExtensions, $maximumSize);
 		if($response === true){
-			$extension = getExtension($originName);
+			$extension = getFileExtension($originName);
 			$response = moveUploadFile($extension, $folder, $tempName);
 			if($response){
 				$array = createArrayServicesTable($serviceName, $response, 'update');

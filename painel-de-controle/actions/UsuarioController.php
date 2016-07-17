@@ -1,8 +1,10 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']) || isset($_SESSION['nivel']) && $_SESSION['nivel'] == 2)
+		header('Location: ../index.php');
 	include_once '../functions/include_directory_functions.php';
-	setIncludePath('../functions/');
-	includePhpExtension(array('crud', 'funcoes_auxiliares_crud', 'util', 'form'));
+	set_include_path('../functions/');
+	includePhpExtension(array('crud', 'crud_auxiliar', 'general', 'form'));
 
 	define('TABELA', 'usuario');
 

@@ -8,7 +8,7 @@ function fileValidation($fileSize, $fileType, array $acceptedExtensions, $maximu
 		return true;
 }
 
-function getExtension($originName){
+function getFileExtension($originName){
 	$index = strpos($originName,'.');
 	$extension = substr($originName, $index  + 1);
 	return $extension;

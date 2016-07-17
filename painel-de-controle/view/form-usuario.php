@@ -1,5 +1,7 @@
 <?php 
 	session_start();
+	if(!isset($_SESSION['id_usuario']) || isset($_SESSION['nivel']) && $_SESSION['nivel'] == 2)
+		header('Location: index.php');
 	include_once '../includes/templates/header.php';
 ?>
 	<section id="corpo">

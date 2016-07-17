@@ -1,8 +1,10 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['id_usuario']))
+		header('Location: ../index.php');
 	include_once '../functions/include_directory_functions.php';
-	setIncludePath('../functions/');
-	includePhpExtension(array('crud', 'funcoes_auxiliares_crud', 'util', 'form'));
+	set_include_path('../functions/');
+	includePhpExtension(array('crud', 'crud_auxiliar', 'general', 'form'));
 	define('TABELA', 'usuario');
 	
 	if(!empty($_POST['userName']) && !empty($_POST['senhaUsuario']) && !empty($_POST['operacao'])){
@@ -14,7 +16,8 @@
 		$response = update(TABELA, $array, "id_usuario = $id");
 		$_SESSION['success'] = $response;
 		pageRedirects('../view/perfil.php');
-	}else{
+	}
+	else{
 		$_SESSION['error'] = 'Todos os campos devem ser preenchido!';
 		pageRedirects('../view/perfil.php');
 	}

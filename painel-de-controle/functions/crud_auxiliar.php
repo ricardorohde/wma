@@ -5,8 +5,6 @@
 function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $crud) {
 	if(!isset($nm_contato, $ds_contato, $icon_contato))
 		die("Um ou mais parametro esta como indefinido");
-	if( empty($nm_contato) || empty($ds_contato) || empty($icon_contato) )
-		die("Um ou mais parametros estar com valor vazio");
 
 	if($crud == 'create'){	
 		$array = array(
@@ -36,8 +34,6 @@ function createArrayContactsTable ($nm_contato, $ds_contato, $icon_contato, $cru
 function createArrayServicesTable ($nm_servico, $img_servico, $crud) {
 	if(!isset($nm_servico, $img_servico))
 		die("Um ou mais parametro esta com indefinido");
-	if( empty($nm_servico) || empty($img_servico) )
-		die("Um ou mais parametros estar com valor vazio");
 
 	if($crud == 'create'){	
 		$array = array(
@@ -65,8 +61,6 @@ function createArrayServicesTable ($nm_servico, $img_servico, $crud) {
 function createArrayServicesDescriptionTable  ($id_fk_servico, $ds_servicos, $crud) {
 	if(!isset($id_fk_servico, $ds_servicos))
 		die("Um ou mais parametro esta com indefinido");
-	if( empty($id_fk_servico) || empty($ds_servicos) )
-		die("Um ou mais parametros estar com valor vazio");
 
 	if($crud == 'create'){	
 		$array = array(

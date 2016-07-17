@@ -2,7 +2,7 @@
 	session_start();
 	include_once '../functions/include_directory_functions.php';
 	setIncludePath('../functions/');
-	includePhpExtension(array('crud', 'funcoes', 'util'));
+	includePhpExtension(array('crud', 'general'));
 	if(isset($_POST['user'], $_POST['senha']) && !empty($_POST['user']) && !empty($_POST['senha'])){
 
 		$user  = addslashes(trim($_POST['user']));
